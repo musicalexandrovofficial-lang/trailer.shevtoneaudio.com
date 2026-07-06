@@ -1,307 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shevtone Horror</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#0b0b0b;
-font-family:Arial,sans-serif;
-color:#111;
+    background:#0b0b0b;
+    font-family:Arial, sans-serif;
+    color:#111;
 }
 
 .nav{
-
-height:90px;
-background:white;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-gap:70px;
-
-font-weight:bold;
-font-size:18px;
-letter-spacing:4px;
-
+    height:90px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    font-weight:900;
+    font-size:18px;
+    letter-spacing:4px;
 }
 
 .nav a{
-
-text-decoration:none;
-color:#111;
-
-transition:.3s;
-
+    text-decoration:none;
+    color:#111;
+    transition:.3s;
 }
 
 .nav a:hover{
-
-color:#c62828;
-
+    color:#c62828;
 }
 
 .nav a.active{
-
-color:#c62828;
-border-bottom:4px solid #c62828;
-padding-bottom:18px;
-
+    color:#c62828;
+    border-bottom:4px solid #c62828;
+    padding-bottom:18px;
 }
 
 .hero{
-
-height:320px;
-
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url("landing.png") center/cover no-repeat;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-color:white;
-
-font-size:52px;
-font-weight:900;
-letter-spacing:5px;
-
+    height:320px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.content{
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("shevtone.png") center center no-repeat;
+    background-size:cover;
+    animation:slowZoom 25s ease-in-out infinite alternate;
+    z-index:0;
+}
 
-background:white;
+.hero h1{
+    position:relative;
+    z-index:2;
+    color:white;
+    font-size:52px;
+    font-weight:900;
+    letter-spacing:5px;
+}
 
-max-width:1200px;
+@keyframes slowZoom{
+    from{
+        transform:scale(1);
+    }
 
-margin:auto;
-
-padding:70px;
-
+    to{
+        transform:scale(1.15);
+    }
+}
+  .content{
+    background:white;
+    max-width:1200px;
+    margin:auto;
+    padding:70px;
 }
 
 .fire{
-
-font-size:62px;
-
-text-align:center;
-
-margin-bottom:15px;
-
+    font-size:62px;
+    text-align:center;
+    margin-bottom:15px;
 }
 
-h1{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:35px;
-
-letter-spacing:2px;
-
+h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:35px;
+    letter-spacing:2px;
 }
 
 .text{
-
-font-size:20px;
-
-line-height:1.8;
-
-max-width:980px;
-
-margin:auto;
-
-text-align:left;
-
+    font-size:20px;
+    line-height:1.8;
+    max-width:980px;
+    margin:auto;
+    text-align:left;
 }
 
 .albums{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-margin-top:60px;
-
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
 }
 
 .album{
-
-overflow:hidden;
-
-border-radius:8px;
-
-box-shadow:0 20px 40px rgba(0,0,0,.35);
-
-transition:.35s;
-
-background:#111;
-
+    overflow:hidden;
+    border-radius:8px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    transition:.4s;
+    background:#111;
 }
 
 .album img{
-
-width:100%;
-
-display:block;
-
-transition:.35s;
-
+    width:100%;
+    display:block;
+    transition:.5s;
 }
 
 .album:hover{
-
-transform:translateY(-8px);
-
+    transform:translateY(-10px);
 }
 
 .album:hover img{
-
-transform:scale(1.05);
-
+    transform:scale(1.08);
 }
 
 .about{
-
-margin-top:90px;
-
-padding:70px;
-
-background:#f7f7f7;
-
-border-radius:8px;
-
+    margin-top:90px;
+    background:#f7f7f7;
+    border-radius:8px;
+    padding:70px;
 }
 
 .about h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:35px;
-
-letter-spacing:3px;
-
+    margin-bottom:30px;
 }
 
 .about p{
-
-font-size:20px;
-
-line-height:1.8;
-
-color:#333;
-
+    font-size:20px;
+    line-height:1.8;
+    color:#333;
 }
 
 .button{
-
-display:inline-block;
-
-margin-top:45px;
-
-background:#c62828;
-
-padding:18px 45px;
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
-letter-spacing:2px;
-
-border-radius:5px;
-
-transition:.3s;
-
+    display:inline-block;
+    margin-top:50px;
+    background:#c62828;
+    color:white;
+    text-decoration:none;
+    padding:18px 45px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:2px;
+    border-radius:6px;
+    transition:.3s;
 }
 
 .button:hover{
-
-background:#8d1f1f;
-
+    background:#8d1f1f;
 }
 
 .footer{
-
-margin-top:80px;
-
-background:#050505;
-
-color:white;
-
-text-align:center;
-
-padding:35px;
-
-letter-spacing:2px;
-
+    margin-top:80px;
+    background:#050505;
+    color:white;
+    text-align:center;
+    padding:35px;
+    letter-spacing:2px;
 }
 
 @media(max-width:900px){
 
 .nav{
-
-height:auto;
-
-padding:25px;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-font-size:14px;
-
+    height:auto;
+    padding:25px;
+    gap:20px;
+    flex-wrap:wrap;
+    font-size:14px;
 }
 
 .hero{
+    height:220px;
+}
 
-height:220px;
-
-font-size:34px;
-
+.hero h1{
+    font-size:34px;
 }
 
 .content{
-
-padding:35px 25px;
-
+    padding:35px 25px;
 }
 
 .albums{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:1fr;
 }
 
 .about{
-
-padding:35px;
-
+    padding:35px;
 }
 
 }
@@ -318,52 +235,36 @@ padding:35px;
 
 <a class="active" href="#">HORROR</a>
 
-<a href="mailto:musicalexandrovofficial@gmail.com">CONTACT INFO</a>
+<a href="mailto:shevtone@yahoo.com">CONTACT INFO</a>
 
 </div>
 
 <section class="hero">
 
-HORROR MUSIC
+<h1>HORROR MUSIC</h1>
 
 </section>
 
 <section class="content">
 
-<div class="fire">
+<div class="fire">🔥</div>
 
-🔥
-
-</div>
-
-<h1>
-
-HORROR TRAILER MUSIC
-
-</h1>
+<h2>HORROR TRAILER MUSIC</h2>
 
 <div class="text">
 
 <p>
-
 ShevtoneAudio creates premium horror trailer music, hybrid orchestral productions,
 dark cinematic sound design, suspense cues, atmospheric tension,
-and powerful trailer music for film, television, games,
-and advertising.
-
+and powerful trailer music for film, television, games, and advertising.
 </p>
 
 <br>
 
 <p>
-
 Every composition is designed with cinematic storytelling,
-professional production quality,
-massive impacts,
-deep drones,
-dark textures,
-and emotional orchestral writing.
-
+professional production quality, massive impacts,
+deep drones, dark textures, and emotional orchestral writing.
 </p>
 
 </div>
@@ -371,15 +272,15 @@ and emotional orchestral writing.
 <div class="albums">
 
 <div class="album">
-<img src="horror-symphonia.png">
+<img src="horror-symphonia.png" alt="Horror Symphonia">
 </div>
 
 <div class="album">
-<img src="horror-hybrid.png">
+<img src="horror-hybrid.png" alt="Horror Hybrid">
 </div>
 
 <div class="album">
-<img src="horror-orchestral.png">
+<img src="horror-orchestral.png" alt="Horror Orchestral">
 </div>
 
 </div>
@@ -398,30 +299,52 @@ hybrid orchestral, and trailer music.
 Drawing on years of professional composition experience,
 Shevtone developed a unique collection of signature instruments,
 production techniques, and creative workflows designed to deliver
-powerful, cinematic sound.
+powerful cinematic sound.
 </p>
 
 <br>
 
 <p>
 His music is created for modern film trailers, games, television,
-and advertising, combining emotional orchestration, dark sound design,
-and high-impact production into a distinctive cinematic style.
+and advertising, combining emotional orchestration,
+dark sound design, and high-impact production
+into a distinctive cinematic style.
 </p>
 
-</section>
+<div style="text-align:center; margin-top:50px;">
 
-<div style="text-align:center;">
-<a class="button" href="mailto:musicalexandrovofficial@gmail.com">
+<a class="button" href="mailto:shevtone@yahoo.com">
 CONTACT INFO
 </a>
+
 </div>
 
 </section>
 
-<div class="footer">
-SHEVTONE © 2026 | HORROR MUSIC | CONTACT INFO
-</div>
+<footer class="footer">
+
+<p style="font-size:20px;font-weight:bold;">
+SHEVTONE
+</p>
+
+<p style="margin-top:15px;">
+Premium Horror Trailer Music • Hybrid Orchestral • Cinematic Sound Design
+</p>
+
+<p style="margin-top:20px;">
+<a href="mailto:shevtone@yahoo.com"
+style="color:white;text-decoration:none;font-weight:bold;">
+shevtone@yahoo.com
+</a>
+</p>
+
+<p style="margin-top:20px;font-size:14px;opacity:.7;">
+© 2026 Shevtone. All Rights Reserved.
+</p>
+
+</footer>
+
+</section>
 
 </body>
 </html>
