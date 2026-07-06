@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HORROR</title>
+<title>Shevtone Horror</title>
 
 <style>
 *{
@@ -15,20 +15,20 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#111;
+    background:#0b0b0b;
     color:#111;
 }
 
 .nav{
     height:90px;
-    background:white;
+    background:#fff;
     display:flex;
-    align-items:center;
     justify-content:center;
-    gap:45px;
+    align-items:center;
+    gap:70px;
     font-size:18px;
-    letter-spacing:4px;
-    font-weight:bold;
+    letter-spacing:5px;
+    font-weight:900;
 }
 
 .nav a{
@@ -43,31 +43,28 @@ body{
 }
 
 .hero{
-    height:280px;
-    background:
-        linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-        url("landing.png") center/cover no-repeat;
+    height:320px;
+    background:#050505;
     display:flex;
     align-items:center;
     justify-content:center;
     color:white;
-    font-size:46px;
+    font-size:48px;
     font-weight:900;
-    letter-spacing:3px;
+    letter-spacing:4px;
 }
 
 .content{
     max-width:1200px;
-    margin:0 auto 60px;
+    margin:0 auto 70px;
     background:white;
-    padding:60px 80px;
+    padding:70px 80px;
     text-align:center;
 }
 
 .fire{
-    font-size:58px;
-    color:#d3302f;
-    margin-bottom:10px;
+    font-size:60px;
+    margin-bottom:15px;
 }
 
 h1{
@@ -78,40 +75,49 @@ h1{
 }
 
 .text{
-    text-align:left;
-    font-size:20px;
-    line-height:1.65;
     max-width:980px;
     margin:auto;
+    text-align:left;
+    font-size:20px;
+    line-height:1.7;
 }
 
 .albums{
-    margin-top:45px;
+    margin-top:60px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:30px;
 }
 
 .album{
-    height:230px;
-    background:#222;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    font-weight:900;
-    letter-spacing:3px;
-    text-align:center;
+    overflow:hidden;
+    border-radius:8px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    transition:.35s;
+    background:#111;
+}
+
+.album img{
+    width:100%;
+    display:block;
+    transition:.35s;
+}
+
+.album:hover{
+    transform:translateY(-8px);
+}
+
+.album:hover img{
+    transform:scale(1.05);
 }
 
 .button{
-    margin-top:45px;
+    margin-top:50px;
     display:inline-block;
     background:#c62828;
     color:white;
     text-decoration:none;
-    padding:18px 42px;
+    padding:18px 45px;
     font-size:18px;
     font-weight:bold;
     letter-spacing:2px;
@@ -135,8 +141,8 @@ h1{
     .nav{
         height:auto;
         padding:25px 15px;
+        gap:25px;
         flex-wrap:wrap;
-        gap:18px;
         font-size:14px;
         letter-spacing:2px;
     }
@@ -146,12 +152,13 @@ h1{
     }
 
     .hero{
-        height:220px;
+        height:240px;
         font-size:34px;
     }
 
     .content{
-        padding:35px 25px;
+        padding:40px 25px;
+        margin:0;
     }
 
     h1{
@@ -172,54 +179,61 @@ h1{
 <body>
 
 <div class="nav">
-    <a href="#">HORROR</a>
-    <a href="#">HORROR</a>
+    <a href="#">SHEVTONE</a>
     <a class="active" href="#">HORROR</a>
-    <a href="#">HORROR</a>
-    <a href="#">HORROR</a>
-    <a href="#">HORROR</a>
+    <a href="mailto:musicalexandrovofficial@gmail.com">CONTACT INFO</a>
 </div>
 
 <section class="hero">
-    HORROR
+    HORROR MUSIC
 </section>
 
 <section class="content">
 
     <div class="fire">🔥</div>
 
-    <h1>HORROR</h1>
+    <h1>HORROR TRAILER MUSIC</h1>
 
     <div class="text">
         <p>
-            HORROR is a premium cinematic production platform focused on dark trailer music,
-            horror sound design, suspense, tension, fear, atmosphere, and powerful cinematic emotion.
+            ShevtoneAudio creates premium horror trailer music, dark cinematic sound design,
+            suspense cues, terrifying atmospheres, hybrid orchestral tension, and powerful
+            music for trailers, films, games, advertising, and modern visual media.
         </p>
 
         <br>
 
         <p>
-            HORROR delivers terrifying textures, deep drones, distorted impacts, dark orchestral energy,
-            psychological tension, slow-burning builds, and massive cinematic endings for film, games,
-            trailers, advertising, and modern visual media.
+            The sound is focused on fear, pressure, darkness, slow-burning tension,
+            massive cinematic endings, distorted textures, deep drones, orchestral horror,
+            hybrid energy, and professional trailer-ready impact.
         </p>
     </div>
 
     <div class="albums">
-        <div class="album">HORROR</div>
-        <div class="album">HORROR</div>
-        <div class="album">HORROR</div>
-        <div class="album">HORROR</div>
-        <div class="album">HORROR</div>
-        <div class="album">HORROR</div>
+
+        <div class="album">
+            <img src="horror-symphonia.png" alt="Horror Symphonia">
+        </div>
+
+        <div class="album">
+            <img src="horror-hybrid.png" alt="Horror Hybrid">
+        </div>
+
+        <div class="album">
+            <img src="horror-orchestral.png" alt="Horror Orchestral">
+        </div>
+
     </div>
 
-    <a class="button" href="#">HORROR</a>
+    <a class="button" href="mailto:musicalexandrovofficial@gmail.com">
+        CONTACT INFO
+    </a>
 
 </section>
 
 <div class="footer">
-    HORROR © 2026
+    SHEVTONE © 2026 | HORROR MUSIC | CONTACT INFO
 </div>
 
 </body>
